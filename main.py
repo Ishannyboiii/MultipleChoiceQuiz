@@ -1,10 +1,12 @@
 from question import Question
 
+# Prompts to display
 question_prompts = [
     "What color are apples?\n(a) Red/Green\n(b) Purple\n(c) Orange\n\n",
     "What color are bananas?\n(a) Teal\n(b) Magenta\n(c) Yellow\n\n",
-    "What color are strawberries?\n(a) Yellow\n(b) Red\n(c) Blue\n\n",
+    "What color are strawberries?\n(a) Yellow\n(b) Red\n(c) Blue\n\n"
 ]
+# Making array of the question objects
 questions = [
     Question(question_prompts[0], "a"),
     Question(question_prompts[1], "c"),
@@ -12,13 +14,14 @@ questions = [
 ]
 
 
-def run_test(questions):
+# Creating the function to actually run the program
+def run_test(questions1):
     score = 0
-    for question in questions:
+    for question in questions1:
         answer = input(question.prompt)
         if answer == question.answer:
             score += 1
-    print(f"You got {str(score)} / {str(len(questions))} right")
+    print(f"You got {str(score)} / {str(len(questions1))} right")
 
 
 run_test(questions)
